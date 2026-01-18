@@ -47,7 +47,7 @@ app.post("/signup", (req, res) => {
   });
 });
 
-// ---------------- LOGIN ----------------
+// login
 app.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
