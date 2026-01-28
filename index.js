@@ -23,7 +23,7 @@ app.post("/signup", (req, res) => {
     });
   }
 
-
+  // duplicate check
   const alreadyExists = users.some(u => u.email === email);
 
   if (alreadyExists) {
