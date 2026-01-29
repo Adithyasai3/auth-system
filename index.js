@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+
 const app = express();
 const PORT = 3000;
 
@@ -76,6 +78,10 @@ app.post("/login", (req, res) => {
     token: fakeToken,
   });
 });
+app.get("/page", (req, res) => {
+  res.sendFile(path.join(__dirname, "page.html"));
+});
+
 
 // server
 app.listen(PORT, () => {
